@@ -1,2 +1,22 @@
-# Galaxia-
-Galaxia is a script for testing and managing user credentials for the universe's most awesome toys.
+# Galaxia - SSH Login Script
+
+This script allows you to automate SSH connections using a list of credentials stored in a CSV file. The script will iterate through the list of credentials, attempting to SSH to a specified IP address using each set of credentials until a successful connection is made or the end of the list is reached. The results of each SSH connection attempt will be logged to the console.
+
+## Requirements
+- `sshpass` must be installed. You can install it using your system's package manager, such as `apt-get` on Ubuntu or `yum` on Fedora.
+
+## Usage
+bash ssh-script.sh <IP address> <CSV file>
+
+## Example
+bash ssh-script.sh 192.168.1.100 credentials.csv
+
+## CSV Format
+The CSV file should contain two columns, separated by a comma:
+- Column 1: username
+- Column 2: password
+
+Please note that using `sshpass` can be a security risk, as the password will be stored in plain text in the script. If you're using this script in a secure environment, make sure to limit access to the script file and to the machine where it will run.
+
+## Contributing
+If you find a bug or have a suggestion for a new feature, feel free to open an issue or a pull request.
